@@ -16,7 +16,7 @@ spec:
         app: {{ .Values.app_deployment.name }}
     spec:
       initContainers:
-      - name: wait-for-"{{ .Values.db_statefulset.name }}"
+      - name: "wait-for-{{ .Values.db_statefulset.name }}"
         image: busybox:1.28
         command: ['sh', '-c', 'until nc -z "{{ .Values.db_statefulset.name }}-0.{{ .Values.db_statefulset.name }}-headless" 3306; do echo waiting for mysql; sleep 5; done;']
       containers:
