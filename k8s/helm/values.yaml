@@ -3,7 +3,7 @@ namespace: bankapp-namespace
 
 # name of configmap, database and db user.
 configmap:  
-  name: bankapp_config
+  name: bankapp-config
   data:
       MYSQL_DATABASE: BankDB
       SPRING_DATASOURCE_USERNAME: root
