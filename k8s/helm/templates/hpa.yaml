@@ -1,7 +1,7 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: "{{ .Values.app_deployment.name }}"-hpa
+  name: "{{ .Values.app_deployment.name }}-hpa"
   namespace: {{ default "bankapp-namespace" .Values.namespace }}
 spec:
   scaleTargetRef:

@@ -42,3 +42,8 @@ helm install <release-name> bankapp/
 Happy Helming!
 
 
+## ITs "{{ Values.name }}-stirng"
+ 
+## Metrics server, VPA must be installed first  CRD
+
+## Secret 

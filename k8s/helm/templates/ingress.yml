@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: "{{ .Values.app_deployment.name }}"-ingress
+  name: "{{ .Values.app_deployment.name }}-ingress"
   namespace: {{ default "bankapp-namespace" .Values.namespace }}
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
@@ -14,7 +14,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: "{{ .Values.app_deployment.label }}"-service
+            name: "{{ .Values.app_deployment.label }}-service"
             port:
               number: {{ default "8080" .Values.bankapp_svc.port}} 
 
