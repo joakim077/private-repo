@@ -51,12 +51,6 @@ hpa:
     cpu_utilizatoion: 70
 
 
-secret:
-  name: mysql-secret
-  data:
-    MYSQL_ROOT_PASSWORD: VGVzdEAxMjM=  # Base64 for "Test@123"
-    SPRING_DATASOURCE_PASSWORD: VGVzdEAxMjM= # Base64 for "Test@123"
-
 
 
  

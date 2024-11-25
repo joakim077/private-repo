@@ -30,7 +30,7 @@ Create secret
 kubectl create secret generic mysql-secret \
     --from-literal=MYSQL_ROOT_PASSWORD=Test@123 \
     --from-literal=SPRING_DATASOURCE_PASSWORD=Test@123 \
-    --namespace my-namespace
+    --namespace bankapp-namespace
 ```
 **NOTE** make sure you create the secret in same namespace which you have created through values.yml
 
@@ -42,8 +42,13 @@ helm install <release-name> bankapp/
 Happy Helming!
 
 
-## ITs "{{ Values.name }}-stirng"
  
 ## Metrics server, VPA must be installed first  CRD
 
-## Secret 
+## Secret creaeted manually and update spec secret
+
+## namespace file delete, but values m hai
+
+## Secret -> not encoded
+## INGRESS valid DNS
+ 
