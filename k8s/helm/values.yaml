@@ -1,5 +1,5 @@
 # namespace 
-namespace: bankapp-namespace
+# namespace: bankapp-namespace
 
 # name of configmap, database and db user.
 configmap:  
@@ -50,16 +50,11 @@ hpa:
     max_replica: 5
     cpu_utilizatoion: 70
 
+# Secret for Database connectivity
 
-
-
+secret:
+  name: mysecret
+  data: 
+    MYSQL_ROOT_PASSWORD: VGVzdEAxMjM=       # (Base64 encoded 'Test@123')
+    SPRING_DATASOURCE_PASSWORD: VGVzdEAxMjM=       # (Base64 encoded 'Test@123')
  
- 
-
-
-
-
-
-# {{- range $index, $element := .Values.myList }}
-#   # Do something with $index and $element
-# {{- end }}
