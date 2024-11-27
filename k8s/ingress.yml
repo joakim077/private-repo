@@ -7,7 +7,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: bankapp.local
+  - host: bankapp.local   # Replace with your FQDN
     http:
       paths:
       - path: /

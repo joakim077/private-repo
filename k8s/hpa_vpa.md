@@ -78,3 +78,5 @@ kubectl top nodes
 
 kubectl describe deployment bankapp-deployment -n bankapp-namespace
 ```
+
+**Note** Note that to configure Autoscaling resources request, limit must be set

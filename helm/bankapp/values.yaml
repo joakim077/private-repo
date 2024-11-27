@@ -16,9 +16,9 @@ db_statefulset:
 ## name and label of app deployment
 app_deployment: 
   name: bankapp
-  cpu_req: 300m
+  cpu_req: 80m
   cpu_limit: 800m
-  mem_req: 250Mi
+  mem_req: 150Mi
   mem_limit: 700Mi
 
   

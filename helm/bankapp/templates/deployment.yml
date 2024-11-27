@@ -35,11 +35,11 @@ spec:
             configMapKeyRef:
               name: {{ .Values.configmap.name }} 
               key: SPRING_DATASOURCE_USERNAME
-        - name: SPRING_DATASOURCE_PASSWORD        ## critical
+        - name: SPRING_DATASOURCE_PASSWORD        
           valueFrom:
             secretKeyRef:
               name: mysql-secret  
-              key: SPRING_DATASOURCE_PASSWORD      ## critical
+              key: SPRING_DATASOURCE_PASSWORD      
         livenessProbe:
           httpGet:
             path: /actuator/health
