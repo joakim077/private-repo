@@ -37,15 +37,26 @@ spec:
 
 ---
 
-### Exposing Bankapp using Ingress
-### 1. In cloud provider Managed Cluster.
-- If you are Using cloud provider managed kubernetes cluster, it will create a service of type LoadBalancer, in the namespace ingress-nginx.
-- Get the public DNS of LoadBalancer and update the Ingress configuration file, add the Fully Quallified DNS Name in `spec.rules.host`. 
+## Exposing Bankapp using Ingress
+### 1. Install Ingress Operator
+- Install the Ingress Controller 
   ```bash
-  kubectl edit ingress bankapp-ingress
+  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.9.4/deploy/static/provider/cloud/deploy.yaml
   ```
-- OR if you have domain, Map the domain with your LoadBalancer IP/DNS and add your domain in `spec.rules.host`.
- 
+- After Installing Ingress Controller a Kubernetes service of type LoadBalancer, in the namespace ingress-nginx will be created.
+  ```bash
+  kubectl get svc -n ingress-nginx
+  ```
+
+### 2. Configure Ingress
+### In cloud provider Managed Cluster.
+  - If you are using cloud provider-managed Kubernetes cluster, the LoadBalancer service will be created successfully.
+  - Get the public DNS of LoadBalancer and update the Ingress configuration file, add the Fully Quallified DNS Name in `spec.rules.host`. 
+    ```bash
+    kubectl edit ingress bankapp-ingress
+    ```
+  - OR if you have domain, Map the domain with your LoadBalancer IP/DNS and add your domain in `spec.rules.host`.
+  
 
 ### 2.In minikube cluster.
 - If you are Using cloud provider managed kubernetes cluster, it will create a service of type LoadBalancer, in the namespace ingress-nginx.
