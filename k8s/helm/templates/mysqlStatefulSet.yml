@@ -31,7 +31,7 @@ spec:
           valueFrom:
             configMapKeyRef:
               name: {{ .Values.configmap.name }} 
-              key: {{ .Values.configmap.data.MYSQL_DATABASE }} 
+              key: MYSQL_DATABASE 
         volumeMounts:
         - name: "{{ .Values.db_statefulset.name }}-data"
           mountPath: /var/lib/mysql
