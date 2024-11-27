@@ -1,3 +1,7 @@
+- Tasks:
+- Ingress: with minikube
+- HPA, VPA: Add resources request, limit -> 
+- HELM: super eassy
 kubectl get svc -n ingress-nginx
 
 If you are Using cloud provider managed kubernetes cluster, it will create a service of type LoadBalancer.
