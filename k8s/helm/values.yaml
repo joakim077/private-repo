@@ -56,5 +56,5 @@ secret:
   name: mysecret
   data: 
     MYSQL_ROOT_PASSWORD: Test@123       # (Base64 encoded 'Test@123')
-    SPRING_DATASOURCE_PASSWORD: VGVzdEAxMjM=       # (Base64 encoded 'Test@123')
+    SPRING_DATASOURCE_PASSWORD: Test@123       # (Base64 encoded 'Test@123')
  
