@@ -14,7 +14,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: "{{ .Values.app_deployment.label }}-service"
+            name: "{{ .Values.app_deployment.name }}-service"
             port:
               number: {{ default "8080" .Values.bankapp_svc.port}} 
 
