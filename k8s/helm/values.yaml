@@ -1,5 +1,5 @@
 # namespace 
-# namespace: bankapp-namespace
+namespace: bankapp-namespace
 
 # name of configmap, database and db user.
 configmap:  
